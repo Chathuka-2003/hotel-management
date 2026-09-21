@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: hotel-management
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/hotel_db}
+    username: ${SPRING_DATASOURCE_USERNAME:hotel_user}
+    password: ${SPRING_DATASOURCE_PASSWORD:hotel_password}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 8080

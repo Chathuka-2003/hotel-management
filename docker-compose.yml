@@ -1,0 +1,47 @@
+services:
+
+  mysql:
+    image: mysql:8.4
+    container_name: hotel-mysql
+
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: hotel_db
+      MYSQL_USER: hotel_user
+      MYSQL_PASSWORD: hotel_password
+
+    ports:
+      - "3306:3306"
+
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  backend:
+    build: .
+    image: hotel-backend:latest
+    container_name: hotel-backend
+
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/hotel_db
+      SPRING_DATASOURCE_USERNAME: hotel_user
+      SPRING_DATASOURCE_PASSWORD: hotel_password
+
+    ports:
+      - "8080:8080"
+
+    depends_on:
+      - mysql
+
+  frontend:
+    build: ./frontend
+    image: hotel-frontend:latest
+    container_name: hotel-frontend
+
+    ports:
+      - "5173:80"
+
+    depends_on:
+      - backend
+
+volumes:
+  mysql_data:
