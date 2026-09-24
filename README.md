@@ -206,7 +206,7 @@ I plan to continue building on these concepts by exploring:
 
 ## 👨‍💻 Author
 
-**Chathuka Hirunodhya**
+**Chathuka Edirisinghe**
 
 Aspiring Cloud & DevOps Engineer
 
