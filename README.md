@@ -19,7 +19,7 @@ Through this project, I practiced building a custom Docker image and running the
 ## 🛠️ Technologies Used
 
 * 🐳 Docker
-* 🐍 Python
+*    React Js
 * 🌐 Flask
 * 🐧 Linux
 * 📦 Dockerfile
