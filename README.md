@@ -20,7 +20,8 @@ Through this project, I practiced building a custom Docker image and running the
 
 * 🐳 Docker
 *    React Js
-* 🌐 Flask
+*    java
+*    Spring Boot
 * 🐧 Linux
 * 📦 Dockerfile
 * 🔧 Docker CLI
